@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.govind.autowiring_in_spring.Address" name="address">
+        <property name="street" value="prayag marga"/>
+        <property name="city" value="kathmandu"/>
+    </bean>
+
+    <!-- Autowiring by name   -->
+    <bean class="com.govind.autowiring_in_spring.Employee" name="employee" autowire="byName">
+    </bean>
+
+    <!-- Autowiring by type   -->
+    <bean class="com.govind.autowiring_in_spring.Employee" name="employee2" autowire="byType"/>
+
+
+<!--  Autowiring by constructor  -->
+    <bean class="com.govind.autowiring_in_spring.Employee" name="employee3" autowire="constructor"/>
+
+</beans>

@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fee98cae-ceab-4fba-9b08-19972f13b9a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/govind/injectingcollections/Emp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/govind/injectingreferencetypes/TestReferenceTypeInjection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1753111223011</updated>
-      <workItem from="1753111224013" duration="13139000" />
+      <workItem from="1753111224013" duration="16920000" />
     </task>
     <servers />
   </component>
