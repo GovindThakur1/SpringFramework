@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <!-- Standalone List   -->
+    <util:list list-class="java.util.LinkedList" id="friendsList">
+        <value>Govind</value>
+        <value>John</value>
+        <value>Wick</value>
+    </util:list>
+
+
+    <!--  Standalone maps  -->
+    <util:map map-class="java.util.LinkedHashMap" id="feeStructure">
+        <entry key="nepali" value="67"/>
+        <entry key="english" value="99"/>
+        <entry key="eph" value="78"/>
+    </util:map>
+
+
+    <!--  Standalone properties  -->
+    <util:properties id="dbConfig">
+        <prop key="driver">com.mysql.jdbc.mydriver</prop>
+        <prop key="myname">Govind</prop>
+        <prop key="address">Biratnagar</prop>
+    </util:properties>
+
+
+    <bean class="com.govind.spring_standalone_collections.Person" name="person">
+        <property name="friends" ref="friendsList"/>
+        <property name="feeStructure" ref="feeStructure"/>
+        <property name="properties" ref="dbConfig"/>
+    </bean>
+
+
+</beans>
