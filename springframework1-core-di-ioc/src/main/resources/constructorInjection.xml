@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean class="com.govind.constructor_injection.Certificate" name="certificate">
+        <constructor-arg value="java spring boot passed" type="java.lang.String"/>
+    </bean>
+
+    <!-- Here we the name of constructor arg is optional because it will call the constructor based on the datatype of values passed   -->
+    <bean class="com.govind.constructor_injection.Person" name="person">
+        <constructor-arg name="personName" value="govind" type="java.lang.String"/>
+        <constructor-arg value="111" type="int"/>
+        <constructor-arg name="certificate" ref="certificate"/>
+    </bean>
+
+
+    <!-- We can also do the above using c schema i.e., constructor schema -->
+    <bean class="com.govind.constructor_injection.Certificate" name="certificate2" c:name="Python Course"/>
+
+    <bean class="com.govind.constructor_injection.Person" name="person2">
+        <constructor-arg name="personName" value="gopal" type="java.lang.String"/>
+        <constructor-arg name="personId" value="511" type="int"/>
+        <constructor-arg name="certificate" ref="certificate2" type="com.govind.constructor_injection.Certificate"/>
+    </bean>
+
+
+    <!-- Injecting the collection (list)   -->
+    <bean class="com.govind.constructor_injection.Certificate" name="certificate3" c:name="C core"/>
+
+    <bean class="com.govind.constructor_injection.Person" name="person3">
+        <constructor-arg value="ram" type="java.lang.String"/>
+        <constructor-arg value="333" type="int"/>
+        <constructor-arg ref="certificate3" type="com.govind.constructor_injection.Certificate"/>
+        <constructor-arg name="phones">
+            <list>
+                <value>11111</value>
+                <value>22222</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+
+    <!--Beans related to Addition class. This is used for demonstrating the ways of solving ambiguity while doing constructor injection   -->
+    <bean class="com.govind.constructor_injection.Addition" name="addition">
+        <constructor-arg name="a" value="5" type="double"/>
+        <constructor-arg name="b" value="8" type="double"/>
+    </bean>
+
+
+    <!--  We can change the order of the parameters by using the index parameters -->
+    <!--  Here no need to use the name parameter since we play with the order   -->
+    <!--  In below the value of a will be 22 and b will be 56 because here the index matters  -->
+    <bean class="com.govind.constructor_injection.Addition" name="addition2">
+        <constructor-arg value="56" index="1"/>
+        <constructor-arg value="22" index="0"/>
+    </bean>
+
+
+</beans>

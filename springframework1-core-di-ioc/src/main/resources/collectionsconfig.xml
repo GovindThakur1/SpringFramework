@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean class="com.govind.injectingcollections.Emp" name="emp">
+        <property name="employeeName" value="radhe"/>
+
+        <property name="phoneNumbers">
+            <list>
+                <value>9818869005</value>
+                <value>9818869777</value>
+                <value>9816678373</value>
+                <value>null</value>
+                <null/>
+            </list>
+        </property>
+
+        <property name="addresses">
+            <set>
+                <value>Biratnagar</value>
+                <value>Japan</value>
+                <value>Dharan</value>
+            </set>
+        </property>
+
+        <property name="courses">
+            <map>
+                <entry key="english" value="2 years"/>
+                <entry key="java" value="1000 years"/>
+            </map>
+        </property>
+
+        <property name="properties">
+            <props>
+                <prop key="name">govind</prop>
+                <prop key="favouritefood">khaana</prop>
+            </props>
+        </property>
+
+    </bean>
+
+
+</beans>

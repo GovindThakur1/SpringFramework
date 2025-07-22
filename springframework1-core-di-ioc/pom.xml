@@ -40,5 +40,13 @@
             <version>1.18.34</version>
         </dependency>
 
+        <!--   This dependency enables us to use the annotations @PostConstruct and @PreDestroy while implementing
+      lifecycle methods of beans using annotations     -->
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.2</version>
+        </dependency>
+
     </dependencies>
 </project>
